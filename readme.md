@@ -8,7 +8,8 @@ Aplicación de chat en tiempo real utilizando:
 
 #### Backend:
 * Dentro del directorio `chat-back`
- ``
+* 
+ ```
 $ npm install
 
 $ docker-compose up
