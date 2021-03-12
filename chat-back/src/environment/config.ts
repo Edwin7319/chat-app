@@ -1,15 +1,11 @@
 export const environment = {
   dataBase: {
-    mySql: {
-      host: 'localhost',
-      port: 32769,
-      name: 'default',
-      username: 'edwin',
-      password: '123456',
-      database: 'test',
-      synchronize: false,
-      dropSchema: false,
-
+    postgeSql: {
+      host: 'ziggy.db.elephantsql.com',
+      port: 5432,
+      username: 'oyryange',
+      database: 'oyryange',
+      password: 'o3XdOaWb2hKDNSkYXpC2rsx43ShbyX_-',
     },
     mongoDb: {
       uri: 'mongodb://localhost:32768/test',

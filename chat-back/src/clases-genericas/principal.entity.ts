@@ -22,7 +22,7 @@ export class PrincipalEntity {
 
   @Column({
     name: 'habilitado',
-    type: 'tinyint',
+    type: 'smallint',
     default: 1
   })
   habilitado: 1 | 0 = 1;

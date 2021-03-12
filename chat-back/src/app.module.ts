@@ -7,23 +7,23 @@ import { DatabaseType } from 'typeorm';
 import { ARREGLO_ENTIDADES } from './constantes/arreglo-entidades';
 import { ARREGLO_MODULOS } from './constantes/arreglo-modulos';
 
-const mysqlType: DatabaseType = 'mysql';
+const dbType: DatabaseType = 'postgres';
 
 @Module({
   imports: [
     ...ARREGLO_MODULOS,
     TypeOrmModule.forRoot({
-      type: mysqlType,
-      host: environment.dataBase.mySql.host,
-      port: environment.dataBase.mySql.port,
-      username: environment.dataBase.mySql.username,
-      password: environment.dataBase.mySql.password,
-      database: environment.dataBase.mySql.database,
+      type: dbType,
+      host: environment.dataBase.postgeSql.host,
+      port: +environment.dataBase.postgeSql.port,
+      username: environment.dataBase.postgeSql.username,
+      password: environment.dataBase.postgeSql.password,
+      database: environment.dataBase.postgeSql.database,
       entities: [
         ...ARREGLO_ENTIDADES
       ],
       synchronize: true,
-      dropSchema: true
+      dropSchema: false
     })
   ],
   controllers: [
